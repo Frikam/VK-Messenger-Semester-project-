@@ -8,11 +8,11 @@
   "tvOS" : [
 
   ],
-  "commitish" : "1.5.1",
+  "commitish" : "1.4.6",
   "iOS" : [
     {
       "name" : "VKSdkFramework",
-      "hash" : "4a4b5d3d4a53aaaf706efe73296e71ccaf6197477450738f9465fee1e701d690"
+      "hash" : "b768c866f386105494ecd7b2d6b10965634e0c3f7c865072e93e95987d874617"
     }
   ]
 }
