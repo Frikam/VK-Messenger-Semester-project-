@@ -15,6 +15,11 @@ protocol DialogViewCellModel {
     var message : String { get }
     var date : String { get }
     var photoUrlString: String { get }
+    var unreadMessages: Int { get }
+    var messageViewController: MessagesViewController { get }
+    var conversationMessageId: Int { get }
+    var lastMessageId: Int { get }
+
 }
 
 class DialogCell: UITableViewCell {
@@ -23,11 +28,14 @@ class DialogCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var unreadMessages: UILabel!
     
     static let reuseId = "DialogCell"
     override func awakeFromNib() {
         super.awakeFromNib()
         makeImageRound()
+        unreadMessages.layer.masksToBounds = true
+        unreadMessages.layer.cornerRadius = 5
     }
     
     func set(viewModel: DialogViewCellModel) {
@@ -35,6 +43,8 @@ class DialogCell: UITableViewCell {
         nameLabel.text = viewModel.name
         messageLabel.text = viewModel.message
         dateLabel.text = viewModel.date
+        unreadMessages.text = " \(viewModel.unreadMessages) "
+        showUnreadMessages()
     }
     
     func makeImageRound() {
@@ -43,5 +53,13 @@ class DialogCell: UITableViewCell {
         photoImageView.layer.borderColor = UIColor.white.cgColor
         photoImageView.layer.masksToBounds = true
         photoImageView.clipsToBounds = true
+    }
+    
+    func showUnreadMessages() {
+        if (unreadMessages.text == " 0 ") {
+            unreadMessages.isHidden = true
+        } else {
+            unreadMessages.isHidden = false
+        }
     }
 }

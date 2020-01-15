@@ -1,15 +1,8 @@
-  
-//
-//  NetworkService.swift
-//  VKNewsFeed
-//
-//  Created by Илья Тетин on 03/10/2019.
-//  Copyright © 2019 Алексей Пархоменко. All rights reserved.
-//
 import Foundation
 
 protocol Networking {
     func request(path: String, params: [String: String], completion: @escaping (Data?, Error?) -> Void)
+    func requestFromUrl(url: URL, completion: @escaping (Data?, Error?) -> Void)
 }
 
 final class NetworkService: Networking {
@@ -30,6 +23,14 @@ final class NetworkService: Networking {
         let task = createDataTask(from: request, completion: completion)
         task.resume()
         print(url)
+    }
+    
+    func requestFromUrl(url: URL, completion: @escaping (Data?, Error?) -> Void) {
+        let request = URLRequest(url: url)
+        let task = createDataTask(from: request, completion: completion)
+        task.resume()
+        //print(url)
+
     }
     
     private func createDataTask(from request: URLRequest, completion: @escaping (Data?, Error?) -> Void) -> URLSessionDataTask {

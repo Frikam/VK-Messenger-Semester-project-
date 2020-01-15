@@ -1,11 +1,3 @@
-//
-//  AuthService.swift
-//  VKNewsFeed
-//
-//  Created by Алексей Пархоменко on 22/02/2019.
-//  Copyright © 2019 Алексей Пархоменко. All rights reserved.
-//
-
 import Foundation
 import VKSdkFramework
 

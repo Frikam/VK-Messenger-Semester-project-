@@ -17,6 +17,13 @@ struct DialogResponse: Decodable {
     var items: [DialogItem]
     let unreadCount: Int?
     var profiles: [ProfileItem]
+    var groups: [GroupItem]?
+}
+
+struct GroupItem: Decodable {
+    let id: Int
+    let name: String
+    let photo100: String
 }
 
 struct ProfileItem: Decodable {
@@ -37,6 +44,7 @@ struct LastMessage: Decodable {
     let date: Double
     let text: String
     let action: Action?
+    let conversationMessageId: Int
 }
 
 struct Conversation: Decodable {

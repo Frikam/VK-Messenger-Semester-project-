@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="18G1012" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SavedConversation" representedClassName="SavedConversation" syncable="YES">
+        <attribute name="conversationMessageId" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="date" attributeType="String"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lastMessageId" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="message" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="photoUrlString" attributeType="String"/>
+        <attribute name="unreadMessages" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="SavedMessage" representedClassName="SavedMessage" syncable="YES">
+        <attribute name="conversationId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="conversationMessageId" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="fromId" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="message" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="SavedConversation" positionX="-47.28125" positionY="-423.8828125" width="128" height="163"/>
+        <element name="SavedMessage" positionX="179.5234375" positionY="-378.8671875" width="128" height="133"/>
+    </elements>
+</model>

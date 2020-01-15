@@ -1,11 +1,3 @@
-//
-//  UIViewController + Storyboard.swift
-//  VKNewsFeed
-//
-//  Created by Алексей Пархоменко on 23/02/2019.
-//  Copyright © 2019 Алексей Пархоменко. All rights reserved.
-//
-
 import Foundation
 import UIKit
 

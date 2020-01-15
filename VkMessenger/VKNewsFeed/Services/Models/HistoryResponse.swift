@@ -22,4 +22,6 @@ struct Message: Decodable {
     var date: Double
     var text: String?
     var fromId: Int
+    var conversationMessageId: Int
+    var peerId: Int
 }
